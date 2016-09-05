@@ -43,8 +43,6 @@ graph diagramaER {
   SessãoMatrícula [shape=plaintext,label="Sessão"]
   TipoPedido [shape=plaintext,label="Tipo"]
   
-
-
   // Relacionamentos
   tem [shape=diamond]
   faz [shape=diamond]
@@ -66,6 +64,8 @@ graph diagramaER {
   tem -- Matrícula [label="1..N"]
   Matrícula -- cursou [label="1"]
   cursou -- DisciplinaCursada [label="0..N"]
+  PedidoDeMatrícula -- pede [label="1..N"]
+  pede -- Disciplina [label="1"]
   DisciplinaCursada -- pede [label="1..N"]
   pede -- Disciplina [label="1"]
   Matrícula -- faz [label="0..N"]
