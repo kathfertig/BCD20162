@@ -34,13 +34,15 @@ graph diagramaER {
   Obrigatório [shape=plaintext]
   Eixo [shape=plaintext]
   Hora [shape=plaintext]
+  DiaDaSemana [shape=plaintext,label="Dia da Semana"]
+  SemanaAB [shape=plaintext,label="Semana AB"]
   Semestre [shape=plaintext]
   Ano [shape=plaintext]
   CHmínimaMatrícula [shape=plaintext,label="CHmín"]
   CHmáximaMatrícula [shape=plaintext,label="CHmáx"]
   SessãoMatrícula [shape=plaintext,label="Sessão"]
   TipoPedido [shape=plaintext,label="Tipo"]
-  SemanaAB [shape=plaintext,label="Semana AB"]
+  
 
 
   // Relacionamentos
@@ -109,6 +111,7 @@ graph diagramaER {
   PréRequisito -- Eixo
   Horário -- Hora
   Horário -- SemanaAB
+  Horário -- DiaDaSemana
   Semestre -- Semestre
   Semestre --  Ano
   PedidoDeMatrícula -- CHmínimaMatrícula
