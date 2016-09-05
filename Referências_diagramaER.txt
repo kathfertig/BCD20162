@@ -1,0 +1,50 @@
+link: diagrama
+https://github.com/kathfertig/BCD20162/blob/master/diagrama_ER.dot
+
+Legenda:
+    - Formato de entidade: Entidade (atributos)
+    - Identificador único: "negrito e sublinhado"
+    - Referência: sublinhado e identificado posteriormente
+
+Aluno ("documento", nome, idade, telefone, email)
+Curso("código", nome)
+Matrícula("número", 'aluno', 'curso')
+# aluno referencia Aluno(documento)
+# curso referencia Curso(código)
+
+DisciplinasCursadas( "matrícula", "disciplina")
+# matrícula referencia Matrícula(número)
+# disciplina referencia Disciplina(código)
+
+Horário(hora, dia da semana, Semana A/B,'disciplina','semestre')
+# disciplina referencia disciplina(código)
+# semestre referencia semestre(código)
+
+PréRequisito(Obrigatório, Eixo, Carga horária mínima, 'disciplina')
+# disciplina referencia Disciplina(código)
+
+PedidoDeMatrícula(sessão,CHmin,CHmáx, tipo,'matrícula','disciplina')
+# matrícula referencia Matrícula(número)
+# disciplina referencia disciplina(código)
+
+Disciplina("código", nome, CH, 'Professor')
+#Professor referencia Professor(documento)
+
+Horário("hora", SemanaAB, Dia da semana, 'disciplina')
+# disciplina referencia Disciplina(código)
+
+Semestre(ano, semestre, 'horário', 'disciplina')
+# horário referencia Horário(hora)
+# disciplina referencia Disciplina(código)
+
+Curso("código",nome)
+Currículo(implantação,'disciplinas','cursoCodigo')
+# disciplinas referencia Disciplinas(código)
+# cursoCodigo referencia curso(código)
+
+Campus(nome,'curso', 'professor')
+#curso referencia Curso(código)
+#professor referencia Professor(documento)
+
+Professor("documento", nome, 'disciplina')
+# disciplina referencia Disciplina(código)
