@@ -31,7 +31,6 @@ graph diagramaER {
   CódigoDisciplina [shape=plaintext,label="Código"]
   CHDisciplina [shape=plaintext,label="CH"]
   CHmínimaRequisito [shape=plaintext,label="CHmín"]
-  CódigoPreRequisito [shape=plaintext,label="Código"]
   Obrigatório [shape=plaintext]
   Eixo [shape=plaintext]
   Hora [shape=plaintext]
@@ -108,7 +107,6 @@ graph diagramaER {
   Disciplina -- CódigoDisciplina
   Disciplina -- CHDisciplina
   PréRequisito -- CHmínimaRequisito
-  PréRequisito -- CódigoPreRequisito
   PréRequisito -- Obrigatório
   PréRequisito -- Eixo
   Horário -- Hora
