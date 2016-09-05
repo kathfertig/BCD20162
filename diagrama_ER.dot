@@ -22,7 +22,6 @@ graph diagramaER {
   Telefone [shape=plaintext]
   Email [shape=plaintext]
   NúmeroMatrícula [shape=plaintext,label="Matrícula"]
-  NúmeroCurso [shape=plaintext,label="Número"]
   NomeCurso [shape=plaintext,label="Nome"]
   CódigoCurso [shape=plaintext,label="Código"]
   NomeCampus [shape=plaintext,label="Nome"]
@@ -60,7 +59,7 @@ graph diagramaER {
   exige [shape=diamond]
   disponibiliza [shape=diamond]
  
-   // Ligações
+   // Ligações Entidade-Entidade
   Aluno -- tem [label="1"]
   tem -- Matrícula [label="1..N"]
   Matrícula -- cursou [label="1"]
@@ -77,8 +76,8 @@ graph diagramaER {
   possui -- Currículo [label="1..N"]
   Professor -- lotado [label="1"]
   lotado -- Câmpus [label="1..N"]
-  -->Disciplina -- ministra [label="1..2"]
-  -->ministra -- Professor [label="1..N"]
+  Disciplina -- ministra [label="1..2"]
+  ministra -- Professor [label="1..N"]
   Currículo -- agrega [label="0..N"]
   agrega -- Disciplina [label="1"]
   Semestre -- oferta [label="1..N"]
@@ -87,6 +86,34 @@ graph diagramaER {
   contém -- Horário [label="1..N"]
   Semestre -- disponibiliza [label="1..N"]
   disponibiliza -- Horário [label="1"]
-  -->Disciplina -- exige [label="1..N"]
-  -->exige -- PréRequisito [label="1..N"]
- }
+  Disciplina -- exige [label="1..N"]
+  exige -- PréRequisito [label="1..N"]
+  
+  // Ligações Entidade-Atributos
+  Aluno -- DocumentoAluno
+  Aluno -- NomeAluno
+  Aluno -- Idade
+  Aluno -- Telefone
+  Aluno -- Email
+  Matrícula -- NúmeroMatrícula
+  Curso -- NomeCurso
+  Curso -- CódigoCurso
+  Campus -- NomeCampus
+  Professor -- DocumentoProfessor
+  Professor --  NomeProfessor
+  DisciplinaCursada -- CódigoCursada
+  Disciplina -- CódigoDisciplina
+  Disciplina -- CHDisciplina
+  PréRequisito -- CHmínimaRequisito
+  PréRequisito -- Obrigatório
+  PréRequisito -- Eixo
+  Horário -- Hora
+  Horário -- SemanaAB
+  Semestre -- Semestre
+  Semestre --  Ano
+  PedidoDeMatrícula -- CHmínimaMatrícula
+  PedidoDeMatrícula -- CHmáximaMatrícula
+  PedidoDeMatrícula -- SessãoMatrícula
+  PedidoDeMatrícula -- TipoPedido
+  
+  }
