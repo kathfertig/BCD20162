@@ -27,7 +27,7 @@ graph diagramaER {
   CódigoCurso [shape=plaintext,label="Código"]
   NomeCampus [shape=plaintext,label="Nome"]
   DocumentoProfessor [shape=plaintext, label="Documento"]
-  NomeProfessor [shape=plaintext,label="Nome"]Implantação"]
+  NomeProfessor [shape=plaintext,label="Implantação"]
   CódigoCursada [shape=plaintext,label="Código"]
   CódigoDisciplina [shape=plaintext,label="Código"]
   CHDisciplina [shape=plaintext,label="CH"]
