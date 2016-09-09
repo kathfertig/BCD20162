@@ -11,7 +11,7 @@ graph diagramaER {
   Câmpus [shape=record]
   Currículo [shape=record]
   Professor [shape=record]
-  Semestre [shape=record]
+  semestre [shape=record]
   Horário [shape=record]
   PréRequisito [shape=record]
  
@@ -112,7 +112,7 @@ graph diagramaER {
   Horário -- Hora
   Horário -- SemanaAB
   Horário -- DiaDaSemana
-  Semestre -- Semestre
+  Semestre -- semestre
   Semestre --  Ano
   PedidoDeMatrícula -- CHmínimaMatrícula
   PedidoDeMatrícula -- CHmáximaMatrícula
