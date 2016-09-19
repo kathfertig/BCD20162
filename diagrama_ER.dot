@@ -91,7 +91,7 @@ graph diagramaER {
   exige -- PréRequisito [label="1..N"]
   
   // Ligações Entidade-Atributos
-  /*Aluno -- DocumentoAluno
+  Aluno -- DocumentoAluno
   Aluno -- NomeAluno
   Aluno -- Idade
   Aluno -- Telefone
@@ -116,6 +116,6 @@ graph diagramaER {
   PedidoDeMatrícula -- CHmínimaMatrícula
   PedidoDeMatrícula -- CHmáximaMatrícula
   PedidoDeMatrícula -- SessãoMatrícula
-  PedidoDeMatrícula -- TipoPedido*/
+  PedidoDeMatrícula -- TipoPedido
   
   }
