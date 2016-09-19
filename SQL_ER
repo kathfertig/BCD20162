@@ -1,0 +1,90 @@
+create database bcd;
+show databases;
+use bcd;
+
+create table aluno ( 
+ 	nome varchar(128) not null, 
+ 	documento char(11) primary key, 
+ 	telefone bigint, 
+ 	email varchar(128)
+);
+create table curso ( 
+ 	numero char(11) primary ley,
+ 	chmin char(11),
+ 	chmax char(11),
+ 	nome varchar(128),
+ 	campus varchar(32),
+ 	constraint fk_curso_campus_campus_nome
+ 	foreign key (campus) references campus(nome),
+ 	curriculo char(11),
+ 	constraint fk_curso_curriculo_curriculo_implantacao_disciplina
+ 	foreign key (curriculo) references curriculo(implantacao, disciplina), 	
+);
+create table curriculo ( 
+ 	implantacao char(11) primary ley,
+ 	disciplina char(11) primary ley,
+ 	foreign key (disciplina) references disciplina(codigo)
+);
+create table campus ( 
+ 	nome varchar(32) primary key,
+);
+
+create table professor ( 
+ 	documento char(11) primary key,
+ 	nome varchar(128),
+ 	campus varchar(32),
+ 	foreign key (campus) references campus(nome)
+);
+create table matricula ( 
+ 	aluno char(11),
+ 	curso char(11),
+ 	numero char(11) primary ley,
+ 	constraint fk_matricula_aluno_aluno_documento
+ 	foreign key (aluno) references aluno(documento),
+ 	foreign key (curso) references curso(numero)
+);
+create table disciplinas_cursadas (
+ 	matricula char(11) primary ley,
+ 	disciplina char(11)  primary ley,
+ 	foreign key (matricula) references matricula(numero),
+  	foreign key (disciplina) references disciplina(codigo)
+);
+
+ create table disciplina (
+ 	codigo char(11) primary ley,
+ 	nome varchar(128),
+ 	ch char(11),
+ 	chmin char(11),
+);
+create table pre_requisito (
+ 	obrigatorio boolean,
+ 	eixo boolean,
+ 	disciplina char(11),
+ 	pre_requisito char(11),
+ 	foreign key (disciplina) references disciplina(codigo),
+  	foreign key (pre_requisito) references disciplina(codigo)
+);
+create table disciplinas_ministradas (
+ 	professor char(11) primary key,
+ 	disciplina char(11)  primary ley,
+ 	foreign key (professor) references professor(documento),
+  	foreign key (disciplina) references disciplina(codigo)
+);
+
+ create table horario (
+ 	hora_inicio char(11) primary key,
+ 	hora_termino char(11) primary key,
+ 	dia_semana char(11) primary key,
+ 	semana_ab boolean primary key,
+ 	disciplina char(11) primary key, 
+ 	semestre char(11) primary key,
+ 	foreign key (disciplina) references disciplina(codigo)
+);
+create table pedido_matricula (
+ 	sessao char(11) primary key,
+ 	tipo boolean  primary ley,
+ 	matricula char(11) primary key,
+ 	disciplina char(11) primary key,
+ 	foreign key (matricula) references matricula(numero),
+  	foreign key (disciplina) references disciplina(codigo)
+);
