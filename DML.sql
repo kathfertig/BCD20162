@@ -35,5 +35,3 @@ values(
 	(select id from  curso  where numero = '290')
 );
 select * from matricula;
-
-
