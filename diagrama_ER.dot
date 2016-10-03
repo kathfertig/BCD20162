@@ -1,47 +1,20 @@
 graph diagramaER {
 
 // Entidades
-  Aluno [shape=record]
   Matrícula [shape=record]
-  DisciplinaCursada [shape=record]
-  Disciplina [shape=record]
-  PedidoDeMatrícula [shape=record]
   Curso [shape=record]
-  Câmpus [shape=record]
+  Aluno [shape=record]
+  Disciplina [shape=record]
   Currículo [shape=record]
-  Professor [shape=record]
-  semestre [shape=record]
-  Horário [shape=record]
-  PréRequisito [shape=record]
- 
-  // Atributos
-  DocumentoAluno [shape=plaintext, label="Documento"]
-  NomeAluno [shape=plaintext,label="Nome"]
-  Idade [shape=plaintext]
-  Telefone [shape=plaintext]
-  Email [shape=plaintext]
-  NúmeroMatrícula [shape=plaintext,label="Matrícula"]
-  NomeCurso [shape=plaintext,label="Nome"]
-  CódigoCurso [shape=plaintext,label="Código"]
-  NomeCampus [shape=plaintext,label="Nome"]
-  DocumentoProfessor [shape=plaintext, label="Documento"]
-  NomeProfessor [shape=plaintext,label="Implantação"]
-  CódigoCursada [shape=plaintext,label="Código"]
-  CódigoDisciplina [shape=plaintext,label="Código"]
-  CHDisciplina [shape=plaintext,label="CH"]
-  CHmínimaRequisito [shape=plaintext,label="CHmín"]
-  Obrigatório [shape=plaintext]
-  Eixo [shape=plaintext]
-  Hora [shape=plaintext]
-  DiaDaSemana [shape=plaintext,label="Dia da Semana"]
-  SemanaAB [shape=plaintext,label="Semana AB"]
-  Semestre [shape=plaintext]
-  Ano [shape=plaintext]
-  CHmínimaMatrícula [shape=plaintext,label="CHmín"]
-  CHmáximaMatrícula [shape=plaintext,label="CHmáx"]
-  SessãoMatrícula [shape=plaintext,label="Sessão"]
-  TipoPedido [shape=plaintext,label="Tipo"]
+  Câmpus [shape=record]
   
+  //DisciplinaCursada [shape=record]
+  //PedidoDeMatrícula [shape=record]
+  //Professor [shape=record]
+  //semestre [shape=record]
+  //Horário [shape=record]
+  //PréRequisito [shape=record]
+ 
   // Relacionamentos
   tem [shape=diamond]
   faz [shape=diamond]
@@ -89,33 +62,5 @@ graph diagramaER {
   disponibiliza -- Horário [label="1"]
   Disciplina -- exige [label="1..N"]
   exige -- PréRequisito [label="1..N"]
-  
-  // Ligações Entidade-Atributos
-  Aluno -- DocumentoAluno
-  Aluno -- NomeAluno
-  Aluno -- Idade
-  Aluno -- Telefone
-  Aluno -- Email
-  Matrícula -- NúmeroMatrícula
-  Curso -- NomeCurso
-  Curso -- CódigoCurso
-  Campus -- NomeCampus
-  Professor -- DocumentoProfessor
-  Professor --  NomeProfessor
-  DisciplinaCursada -- CódigoCursada
-  Disciplina -- CódigoDisciplina
-  Disciplina -- CHDisciplina
-  PréRequisito -- CHmínimaRequisito
-  PréRequisito -- Obrigatório
-  PréRequisito -- Eixo
-  Horário -- Hora
-  Horário -- SemanaAB
-  Horário -- DiaDaSemana
-  Semestre -- semestre
-  Semestre --  Ano
-  PedidoDeMatrícula -- CHmínimaMatrícula
-  PedidoDeMatrícula -- CHmáximaMatrícula
-  PedidoDeMatrícula -- SessãoMatrícula
-  PedidoDeMatrícula -- TipoPedido
-  
-  }
+
+}
