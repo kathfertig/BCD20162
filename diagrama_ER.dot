@@ -17,19 +17,19 @@ graph diagramaER {
  
   // Relacionamentos
   tem [shape=diamond]
-  faz [shape=diamond]
+  //faz [shape=diamond]
   vinculado [shape=diamond]
-  cursou [shape=diamond]
-  pede [shape=diamond]
+  //cursou [shape=diamond]
+  //pede [shape=diamond]
   pertence [shape=diamond]
   possui [shape=diamond]
-  lotado [shape=diamond]
+  //lotado [shape=diamond]
   agrega [shape=diamond]
-  ministra [shape=diamond]
-  oferta [shape=diamond]
-  contém [shape=diamond]
-  exige [shape=diamond]
-  disponibiliza [shape=diamond]
+  //ministra [shape=diamond]
+  //oferta [shape=diamond]
+  //contém [shape=diamond]
+  //exige [shape=diamond]
+  //disponibiliza [shape=diamond]
  
    // Ligações Entidade-Entidade
   Aluno -- tem [label="1"]
