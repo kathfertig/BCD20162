@@ -61,6 +61,4 @@ graph diagramaER {
   //Semestre -- disponibiliza [label="1..N"]
   //disponibiliza -- Horário [label="1"]
   //Disciplina -- exige [label="1..N"]
-  //exige -- PréRequisito [label="1..N"]
-
-}
+  //exige -- PréRequisito [label="1..N"]}
