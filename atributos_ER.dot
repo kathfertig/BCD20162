@@ -1,0 +1,112 @@
+graph diagramaER {
+
+// Entidades
+  Matrícula [shape=record]
+  Curso [shape=record]
+  Aluno [shape=record]
+  Disciplina [shape=record]
+  Currículo [shape=record]
+  Câmpus [shape=record]
+  
+  //DisciplinaCursada [shape=record]
+  //PedidoDeMatrícula [shape=record]
+  //Professor [shape=record]
+  //semestre [shape=record]
+  //Horário [shape=record]
+  //PréRequisito [shape=record]
+
+// Atributos
+  //Câmpus
+  IdCampus [shape=plaintext,label="ID"]
+  NomeCampus [shape=plaintext,label="Nome"]
+  
+  //Aluno
+  IdAluno [shape=plaintext,label="ID"]
+  DocumentoAluno [shape=plaintext, label="Documento"]
+  NomeAluno [shape=plaintext,label="Nome"]
+  Telefone [shape=plaintext]
+  Email [shape=plaintext]
+  
+  //Disciplina  
+  IdDisciplina [shape=plaintext,label="ID"]
+  CódigoDisciplina [shape=plaintext,label="Código"]
+  CHDisciplina [shape=plaintext,label="CH"]
+  
+  //Curso
+  IdCurso [shape=plaintext,label="ID"]
+  NumeroCurso [shape=plaintext,label=Número"]
+  CHmínimaCurso [shape=plaintext,label="CHmín"]
+  CHmáximaCurso [shape=plaintext,label="CHmáx"]
+  NomeCurso [shape=plaintext,label="Nome"]
+  CampusRef [shape=plaintext,label="Campus"]
+  
+  //Currículo
+  IdCurrículo [shape=plaintext,label="ID"]
+  Implantação [shape=plaintext,label="Implantação"]
+  CursoRef [shape=plaintext,label="Curso"]
+  DisciplinaRef [shape=plaintext,label="Disciplina"]
+  
+  //Matrícula
+  IdMatrícula [shape=plaintext,label="ID"]
+  NúmeroMatrícula [shape=plaintext,label="Matrícula"]
+  AlunoRef [shape=plaintext,label="Aluno"]
+  CursoRef [shape=plaintext,label="curso"]
+  
+  //DocumentoProfessor [shape=plaintext, label="Documento"]
+  //NomeProfessor [shape=plaintext,label="Implantação"]
+  //CódigoCursada [shape=plaintext,label="Código"]
+  //CHmínimaRequisito [shape=plaintext,label="CHmín"]
+  //Obrigatório [shape=plaintext]
+  //Eixo [shape=plaintext]
+  //Hora [shape=plaintext]
+  //DiaDaSemana [shape=plaintext,label="Dia da Semana"]
+  //SemanaAB [shape=plaintext,label="Semana AB"]
+  //Semestre [shape=plaintext]
+  //Ano [shape=plaintext]
+  //CHmínimaMatrícula [shape=plaintext,label="CHmín"]
+  //CHmáximaMatrícula [shape=plaintext,label="CHmáx"]
+  //SessãoMatrícula [shape=plaintext,label="Sessão"]
+  //TipoPedido [shape=plaintext,label="Tipo"]
+
+// Ligações Entidade-Atributos
+  Aluno -- IdAluno
+  Aluno -- DocumentoAluno
+  Aluno -- NomeAluno
+  Aluno -- Telefone
+  Aluno -- Email
+  Campus -- IdCampus
+  Campus -- NomeCampus
+  Disciplina -- IdDisciplina
+  Disciplina -- CódigoDisciplina
+  Disciplina -- CHDisciplina
+  Curso -- IdCurso
+  Curso -- NumeroCurso
+  Curso -- CHmínimaCurso
+  Curso -- CHmáximaCurso
+  Curso -- NomeCurso
+  Curso -- CampusRed
+  Currículo -- IdCurrículo
+  Currículo -- Implantação
+  Currículo -- CursoRef
+  Currículo -- DisciplinaRef
+  Matrícula -- IdMatrícula
+  Matrícula -- NúmeroMatrícula
+  Matrícula -- AlunoRef
+  Matrícula -- CursoRef
+  
+  //Professor -- DocumentoProfessor
+  //Professor --  NomeProfessor
+  //DisciplinaCursada -- CódigoCursada
+  //PréRequisito -- CHmínimaRequisito
+  //PréRequisito -- Obrigatório
+  //PréRequisito -- Eixo
+  //Horário -- Hora
+  //Horário -- SemanaAB
+  //Horário -- DiaDaSemana
+  //Semestre -- semestre
+  //Semestre --  Ano
+  //PedidoDeMatrícula -- CHmínimaMatrícula
+  //PedidoDeMatrícula -- CHmáximaMatrícula
+  //PedidoDeMatrícula -- SessãoMatrícula
+  //PedidoDeMatrícula -- TipoPedido
+  }
