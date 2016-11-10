@@ -34,7 +34,7 @@ graph diagramaER {
   
   //Curso
   IdCurso [shape=plaintext,label="ID"]
-  NumeroCurso [shape=plaintext,label=Número"]
+  NumeroCurso [shape=plaintext,label="Número"]
   CHmínimaCurso [shape=plaintext,label="CHmín"]
   CHmáximaCurso [shape=plaintext,label="CHmáx"]
   NomeCurso [shape=plaintext,label="Nome"]
